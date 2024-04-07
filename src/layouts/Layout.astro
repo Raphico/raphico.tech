@@ -1,0 +1,51 @@
+---
+import "../styles/globals.css"
+
+import { siteConfig } from "../site"
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content={siteConfig.name} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href={Astro.url} />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="white"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="black"
+    />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="description" content={siteConfig.description} />
+    <meta name="keywords" content={siteConfig.description} />
+    <meta property="og:title" content={siteConfig.name} />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={siteConfig.description} />
+    <meta property="og:url" content={siteConfig.url} />
+    <meta property="og:image" content={siteConfig.ogImage} />
+    <meta property="og:site_name" content={siteConfig.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteConfig.name} />
+    <meta name="twitter:description" content={siteConfig.description} />
+    <meta name="twitter:image" content={siteConfig.ogImage} />
+    <title>{siteConfig.name}</title>
+  </head>
+  <body
+    class="min-h-screen bg-background font-body text-foreground antialiased"
+  >
+    <div class="relative min-h-screen flex-1 flex-col">
+      <main class="flex-1">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
