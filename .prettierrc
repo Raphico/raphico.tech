@@ -1,0 +1,22 @@
+{
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "printWidth": 80,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "semi": false,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  "pluginSearchDirs": false,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
+  ],
+  "astroAllowShorthand": false,
+  "tailwindConfig": "./tailwind.config.mjs"
+}

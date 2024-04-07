@@ -1,0 +1,29 @@
+{
+  "name": "raphico",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Raphael Awoyinfa's Personal Site",
+  "author": "Raphico",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.16",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.13"
+  }
+}
