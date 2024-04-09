@@ -33,7 +33,7 @@ export function ThemeToggler() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle Theme"
-      className="inline-flex transform items-center justify-center rounded-3xl bg-foreground bg-orange-300 p-4 text-sm font-medium transition duration-500 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:bg-zinc-600"
+      className="inline-flex items-center justify-center rounded-3xl bg-foreground bg-orange-300 p-4 transition duration-500 ease-in-out dark:bg-zinc-600"
     >
       {theme === "dark" ? <MoonIcon /> : <SunIcon />}
     </button>
