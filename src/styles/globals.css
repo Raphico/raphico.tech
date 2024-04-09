@@ -24,6 +24,13 @@
     font-style: normal;
     font-display: swap;
   }
+  @font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
   :root {
     --background: 34 41% 90%;
     --foreground: 220 26% 14%;
