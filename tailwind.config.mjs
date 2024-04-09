@@ -28,7 +28,7 @@ export default {
       },
       fontFamily: {
         heading: ["Poppins", ...defaultTheme.fontFamily.sans],
-        body: ["Roboto", ...defaultTheme.fontFamily.sans],
+        body: ["Inter", ...defaultTheme.fontFamily.sans],
       },
     },
   },
