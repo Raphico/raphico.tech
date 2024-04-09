@@ -15,12 +15,12 @@ export const siteConfig = {
   links,
   mainNav: [
     {
-      title: "About",
+      title: "Works",
       href: "/",
     },
     {
-      title: "Works",
-      href: "/works",
+      title: "About",
+      href: "/about",
     },
     {
       title: "Expertise",
