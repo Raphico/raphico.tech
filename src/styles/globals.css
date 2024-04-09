@@ -5,7 +5,7 @@
 @layer base {
   @font-face {
     font-family: "Poppins";
-    src: url("/fonts/Poppins-Bold.woff2") format("woff2");
+    src: url("/fonts/Poppins-SemiBold.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -38,6 +38,8 @@
     --secondary: 0 0% 100%;
 
     --radius: 0.5rem;
+
+    --ring: 220 26% 14%;
   }
 
   .dark {
@@ -47,6 +49,7 @@
     --secondary: 240 2% 20%;
 
     --radius: 0.5rem;
+    --ring: 0 0% 100%;
   }
 }
 
