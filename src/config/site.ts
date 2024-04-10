@@ -1,4 +1,4 @@
-import type { FooterItem, MainNavItem } from "."
+import type { FooterItem, MainNavItem } from "../types"
 
 const links = {
   x: "https://twitter.com/Raphico_OA",
