@@ -1,4 +1,4 @@
-interface FooterItem {
+export type FooterItem = {
   title: string
   items: {
     title: string
@@ -6,7 +6,12 @@ interface FooterItem {
   }[]
 }
 
-export interface MainNavItem {
+export type MainNavItem = {
   title: string
   href: string
+}
+
+export type Note = {
+  title: string
+  content: string
 }

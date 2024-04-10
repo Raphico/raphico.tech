@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro"
+import H1 from "../components/H1.astro"
+import BodyText from "../components/BodyText.astro"
+import Shell from "../components/Shell.astro"
+
+import { notes } from "../data/content"
+---
+
+<Layout>
+  <Shell>
+    <div
+      class="flex flex-col items-center justify-center space-y-2 text-center"
+    >
+      <H1>Notes</H1>
+      <p class="text-base text-foreground/75 sm:text-lg md:text-2xl">
+        Explore my collections of insights, learnings, and reflections on my
+        journey as a developer
+      </p>
+    </div>
+
+    <div class="grid gap-10">
+      {
+        notes.map((note) => (
+          <div class="shadown-md space-y-4 rounded-md bg-secondary/40 p-10 backdrop-blur">
+            <h3 class="text-lg font-semibold sm:text-xl">{note.title}</h3>
+            <div class="text-foreground/75">{note.content}</div>
+          </div>
+        ))
+      }
+    </div>
+  </Shell>
+</Layout>
