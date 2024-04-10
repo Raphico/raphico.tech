@@ -1,5 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Shell from "../components/Shell.astro"
+
+import H1 from "../components/H1.astro"
 ---
 
-<Layout />
+<Layout>
+  <Shell>
+    <div
+      class="flex flex-col items-center justify-center space-y-2 text-center"
+    >
+      <H1> Hi! I&apos;m Raphael </H1>
+      <p class="text-base text-foreground/75 sm:text-lg md:text-2xl">
+        Passionate about building solutions with software
+      </p>
+    </div>
+  </Shell>
+</Layout>

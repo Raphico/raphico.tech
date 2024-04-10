@@ -15,7 +15,7 @@ export const siteConfig = {
   links,
   mainNav: [
     {
-      title: "Works",
+      title: "Work",
       href: "/",
     },
     {
