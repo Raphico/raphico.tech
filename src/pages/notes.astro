@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import H1 from "../components/H1.astro"
-import BodyText from "../components/BodyText.astro"
 import Shell from "../components/Shell.astro"
 
 import { notes } from "../data/content"
@@ -19,12 +18,12 @@ import { notes } from "../data/content"
       </p>
     </div>
 
-    <div class="grid gap-10">
+    <div class="mx-auto grid max-w-3xl gap-10">
       {
         notes.map((note) => (
-          <div class="shadown-md space-y-4 rounded-md bg-secondary/40 p-10 backdrop-blur">
+          <div class="shadown-md space-y-4 rounded-md bg-secondary/40 p-6 backdrop-blur sm:p-10">
             <h3 class="text-lg font-semibold sm:text-xl">{note.title}</h3>
-            <div class="text-foreground/75">{note.content}</div>
+            <p class="text-foreground/75">{note.content}</p>
           </div>
         ))
       }
