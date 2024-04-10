@@ -1,0 +1,39 @@
+---
+import Shell from "../components/Shell.astro"
+import Layout from "../layouts/Layout.astro"
+
+import { siteConfig } from "../config/site"
+---
+
+<Layout>
+  <Shell>
+    <h2 class="mx-auto max-w-2xl text-center font-heading text-xl sm:text-2xl">
+      Got an exciting project or just want to connect with a fellow developer?
+      Let's collaborate to bring your ideas to life and make an impact. Reach
+      out!
+    </h2>
+
+    <div
+      class="flex flex-col items-center justify-center space-y-4 text-center"
+    >
+      <a
+        href={siteConfig.links.gmail}
+        class="text-lg font-semibold underline-offset-8 hover:underline sm:text-xl"
+      >
+        raphicogit@gmail.com
+      </a>
+      <a
+        href={siteConfig.links.github}
+        class="text-lg font-semibold underline-offset-8 hover:underline sm:text-xl"
+      >
+        Github
+      </a>
+      <a
+        href={siteConfig.links.x}
+        class="text-lg font-semibold underline-offset-8 hover:underline sm:text-xl"
+      >
+        X
+      </a>
+    </div>
+  </Shell>
+</Layout>
