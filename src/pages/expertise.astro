@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Shell from "../components/Shell.astro"
+import H1 from "../components/H1.astro"
+
+import { expertise } from "../data/content"
+import { Image } from "astro:assets"
+---
+
+<Layout>
+  <Shell>
+    <div class="text-center">
+      <H1>My Expertise</H1>
+    </div>
+
+    <div class="grid gap-10 sm:grid-cols-2">
+      {
+        expertise.map((item) => (
+          <div class="shadown-md rounded-md bg-secondary/40 p-6 backdrop-blur">
+            <div class="flex items-start gap-6">
+              <Image
+                src={item.icon}
+                alt={`${item.title} icon`}
+                width={40}
+                height={40}
+                format="svg"
+                decoding="async"
+                loading="lazy"
+              />
+              <div class="space-y-4">
+                <h3 class="text-lg font-semibold sm:text-xl">{item.title}</h3>
+                <p class="text-foreground/75">{item.description}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Shell>
+</Layout>

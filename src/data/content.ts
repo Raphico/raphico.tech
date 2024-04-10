@@ -1,4 +1,5 @@
-import type { Note } from "../types"
+import type { Expertise, Note } from "../types"
+import { postgresIcon, reactIcon } from "./images"
 
 export const notes = [
   {
@@ -27,3 +28,18 @@ export const notes = [
       "Failure is an inevitable part of the learning process. Embrace failure as an opportunity for growth and learning.",
   },
 ] satisfies Note[]
+
+export const expertise = [
+  {
+    icon: reactIcon,
+    title: "Frontend Dev",
+    description:
+      "Development expertise in HTML, CSS, Javascript, Typescript, React, Nextjs, and Astro",
+  },
+  {
+    icon: postgresIcon,
+    title: "Backend Dev",
+    description:
+      "Skilled in building robust server-side applications using PostgreSQL for data storage, along with experience in BAAS, such as Convex",
+  },
+] satisfies Expertise[]
