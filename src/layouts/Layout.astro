@@ -4,8 +4,6 @@ import "../styles/globals.css"
 import { siteConfig } from "../config/site"
 import SiteHeader from "../components/SiteHeader.astro"
 import SiteFooter from "../components/SiteFooter.astro"
-
-import { ViewTransitions } from "astro:transitions"
 ---
 
 <script is:inline>
@@ -66,7 +64,6 @@ import { ViewTransitions } from "astro:transitions"
     <meta name="twitter:description" content={siteConfig.description} />
     <meta name="twitter:image" content={siteConfig.ogImage} />
     <title>{siteConfig.name}</title>
-    <ViewTransitions />
   </head>
   <body class="bg-background font-body text-foreground antialiased">
     <div class="relative flex min-h-screen flex-col">

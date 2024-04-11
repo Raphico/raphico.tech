@@ -32,7 +32,7 @@ const work = works.find((work) => work.title.toLowerCase() === slug)
         </a>
       </div>
     ) : (
-      <Shell transition:animate="slide" transition:name={`work-${work.title}`}>
+      <Shell>
         <H1>{work.title}</H1>
 
         <div class="flex items-center space-x-2 text-sm font-medium sm:text-base">

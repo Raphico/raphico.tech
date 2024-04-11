@@ -1,8 +1,6 @@
 import * as React from "react"
 import { MoonIcon, SunIcon } from "lucide-react"
 
-const themes = ["light", "dark"]
-
 export function ThemeToggler() {
   const [mounted, setMounted] = React.useState(false)
   const [theme, setTheme] = React.useState<"light" | "dark">("dark")
