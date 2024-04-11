@@ -15,8 +15,10 @@ const currentPathname = Astro.url.pathname
       {
         siteConfig.mainNav.map((item) => {
           const isActive =
-            item.href ===
-            (currentPathname.includes("/work") ? "/" : currentPathname)
+            item.href === "/"
+              ? currentPathname === "/" || currentPathname.includes("/work")
+              : item.href === currentPathname.replace(/\/$/, "")
+
           return (
             <li>
               <a
