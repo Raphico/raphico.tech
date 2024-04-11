@@ -1,6 +1,6 @@
-# Raphael Awoyinfa's Personal site
+# [Raphael Awoyinfa's Personal Site](https://raphico.vercel.app/)
 
-[https://www.raphico.vercel.app](https://www.raphico.vercel.app)
+[![screenshot](./screenshot.png)](https://raphico.vercel.app/)
 
 Welcome to the repository for my personal website. This repository contains the source code, assets, and content for my personal site.
 
