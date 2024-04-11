@@ -4,7 +4,6 @@ import Shell from "../components/Shell.astro"
 import H1 from "../components/H1.astro"
 
 import { expertise } from "../data/content"
-import { Image } from "astro:assets"
 ---
 
 <Layout>
@@ -16,22 +15,9 @@ import { Image } from "astro:assets"
     <div class="grid gap-10 sm:grid-cols-2">
       {
         expertise.map((item) => (
-          <div class="shadown-md rounded-md bg-secondary/40 p-6 backdrop-blur">
-            <div class="flex items-start gap-6">
-              <Image
-                src={item.icon}
-                alt={`${item.title} icon`}
-                width={40}
-                height={40}
-                format="svg"
-                decoding="async"
-                loading="lazy"
-              />
-              <div class="space-y-4">
-                <h3 class="text-lg font-semibold sm:text-xl">{item.title}</h3>
-                <p class="text-foreground/75">{item.description}</p>
-              </div>
-            </div>
+          <div class="shadown-md space-y-4 rounded-md bg-secondary/40 p-6 backdrop-blur sm:p-10">
+            <h3 class="text-lg font-semibold sm:text-xl">{item.title}</h3>
+            <p class="text-foreground/75">{item.description}</p>
           </div>
         ))
       }

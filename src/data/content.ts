@@ -1,7 +1,5 @@
 import type { Expertise, Note, WorkItem } from "../types"
 import {
-  postgresIcon,
-  reactIcon,
   payUpDashboardPageImage,
   payUpHomepageImage,
   payUpInvoicesPageImage,
@@ -122,13 +120,11 @@ export const notes = [
 
 export const expertise = [
   {
-    icon: reactIcon,
     title: "Frontend Dev",
     description:
       "Development expertise in HTML, CSS, Javascript, Typescript, React, Nextjs, and Astro",
   },
   {
-    icon: postgresIcon,
     title: "Backend Dev",
     description:
       "Skilled in building robust server-side applications using PostgreSQL for data storage, along with experience in BAAS, such as Convex",

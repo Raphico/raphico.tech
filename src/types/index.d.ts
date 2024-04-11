@@ -17,7 +17,6 @@ export type Note = {
 }
 
 export type Expertise = {
-  icon: ImageMetadata
   title: string
   description: string
 }
