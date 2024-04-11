@@ -13,21 +13,26 @@ const currentPathname = Astro.url.pathname
   >
     <ul class="flex items-center space-x-4">
       {
-        siteConfig.mainNav.map((item) => (
-          <li>
-            <a
-              href={item.href}
-              class={cn(
-                "rounded-full px-[0.625rem] py-[0.375rem] text-sm sm:px-4 sm:py-2 md:text-base lg:text-lg",
-                {
-                  "bg-secondary/60": currentPathname === item.href,
-                }
-              )}
-            >
-              {item.title}
-            </a>
-          </li>
-        ))
+        siteConfig.mainNav.map((item) => {
+          const isActive =
+            item.href ===
+            (currentPathname.includes("/work") ? "/" : currentPathname)
+          return (
+            <li>
+              <a
+                href={item.href}
+                class={cn(
+                  "rounded-full px-[0.625rem] py-[0.375rem] text-sm sm:px-4 sm:py-2 md:text-base lg:text-lg",
+                  {
+                    "bg-secondary/60": isActive,
+                  }
+                )}
+              >
+                {item.title}
+              </a>
+            </li>
+          )
+        })
       }
     </ul>
   </nav>

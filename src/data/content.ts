@@ -1,5 +1,96 @@
-import type { Expertise, Note } from "../types"
-import { postgresIcon, reactIcon } from "./images"
+import type { Expertise, Note, WorkItem } from "../types"
+import {
+  postgresIcon,
+  reactIcon,
+  payUpDashboardPageImage,
+  payUpHomepageImage,
+  payUpInvoicesPageImage,
+  wardrobePalHomepageImage,
+  wardrobePalOutfitPageImage,
+  wardrobePalWardrobePageImage,
+  zenflowBillingPageImage,
+  zenflowBoardsPageImage,
+  zenflowHomepageImage,
+  zenflowTasksPageImage,
+} from "./images"
+
+export const works = [
+  {
+    id: "1",
+    title: "Zenflow",
+    description: "A comprehensive task manager web application",
+    thumbnail: zenflowHomepageImage,
+    about:
+      "ZenFlow is a task manager web app built with Next.js and a host of modern technologies like Tailwind CSS, Clerk, MYSQL, Drizzle ORM, shadcn/ui, Stripe, Contentlayer, and MailChimp. It offers task creation and management, board view, column addition, task filtering and sorting, user authentication, account settings, dark mode, a blog, analytics, Stripe payment integration, and MailChimp newsletter subscription.",
+    images: [
+      zenflowHomepageImage,
+      zenflowBoardsPageImage,
+      zenflowTasksPageImage,
+      zenflowBillingPageImage,
+    ],
+    githubLink: "https://github.com/Raphico/Zenflow",
+    liveSiteLink: "https://zenflow.vercel.app",
+    technologies: [
+      "nextjs",
+      "typescript",
+      "tailwindcss",
+      "shadcn-ui",
+      "stripe",
+      "clerk",
+      "MYSQL",
+      "drizzle-orm",
+      "contentlayer",
+      "mailchimp",
+    ],
+  },
+  {
+    id: "2",
+    title: "WardrobePal",
+    description:
+      "A web app for managing clothing inventory and creating virtual outfits",
+    thumbnail: wardrobePalHomepageImage,
+    about:
+      "WardrobePal is a web application that simplifies your wardrobe management. It allows you to keep track of your clothing items and assemble virtual outfits. The application is built using Next.js, Tailwind CSS, Clerk, Convex, and shadcn/ui. Key features include a user-friendly interface for adding, viewing, updating, and deleting clothing items and outfits, as well as tracking the usage of each item. This project demonstrates a practical application of modern web technologies.",
+    images: [
+      wardrobePalHomepageImage,
+      wardrobePalWardrobePageImage,
+      wardrobePalOutfitPageImage,
+    ],
+    githubLink: "https://github.com/Raphico/WardrobePal",
+    liveSiteLink: "https://wardrobe-pal.vercel.app",
+    technologies: [
+      "nextjs",
+      "typescript",
+      "tailwindcss",
+      "convex",
+      "clerk",
+      "shadcn-ui",
+      "konvajs",
+    ],
+  },
+  {
+    id: "3",
+    title: "PayUp",
+    description: "A user-friendly web app for managing invoices",
+    thumbnail: payUpHomepageImage,
+    about:
+      "A user-friendly invoice application built with React.js and Firebase, offering features like invoice management, pagination, filtering, table view for seamless user experience.",
+    images: [
+      payUpHomepageImage,
+      payUpDashboardPageImage,
+      payUpInvoicesPageImage,
+    ],
+    githubLink: "https://github.com/Raphico/PayUp",
+    liveSiteLink: "https://pay-up-roan.vercel.app/",
+    technologies: [
+      "react",
+      "typescript",
+      "tailwindcss",
+      "firebase",
+      "radix-ui",
+    ],
+  },
+] satisfies WorkItem[]
 
 export const notes = [
   {

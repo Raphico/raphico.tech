@@ -1,0 +1,96 @@
+---
+import type { GetStaticPaths } from "astro"
+import { works } from "../../data/content"
+import Layout from "../../layouts/Layout.astro"
+import H1 from "../../components/H1.astro"
+import BodyText from "../../components/BodyText.astro"
+import Shell from "../../components/Shell.astro"
+import { Image } from "astro:assets"
+
+export const getStaticPaths = (() => {
+  return works.map((work) => ({ params: { slug: work.title.toLowerCase() } }))
+}) satisfies GetStaticPaths
+
+const slug = Astro.params.slug as string
+
+const work = works.find((work) => work.title.toLowerCase() === slug)
+---
+
+<Layout>
+  {
+    !work ? (
+      <div class="container flex max-w-2xl flex-col items-center justify-center space-y-6 py-10 text-center sm:pb-24 sm:pt-14">
+        <H1>Oops!</H1>
+        <BodyText>
+          Looks like you wondered off. Let's get you back on right track.
+        </BodyText>
+        <a
+          href="/"
+          class="inline-flex h-10 items-center justify-center rounded-md bg-foreground px-4 py-2 text-sm font-medium text-background transition-colors hover:bg-foreground/90"
+        >
+          See all Works
+        </a>
+      </div>
+    ) : (
+      <Shell>
+        <H1>{work.title}</H1>
+
+        <div class="flex items-center space-x-2 text-sm font-medium sm:text-base">
+          <a href="/" class="text-foreground/75">
+            Home
+          </a>
+          <p class="text-foreground/75">&gt;</p>
+          <p class="text-foreground">{work.title}</p>
+        </div>
+
+        <div class="max-w-2xl">
+          <BodyText>{work.about}</BodyText>
+        </div>
+
+        <div class="space-y-6 sm:space-y-8">
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold sm:text-xl">Technologies</h3>
+            <div class="flex max-w-xl flex-wrap gap-2">
+              {work.technologies.map((technology) => (
+                <p class="shadown-md rounded-md bg-secondary/40 px-2.5 py-1.5 text-sm font-medium backdrop-blur">
+                  {technology}
+                </p>
+              ))}
+            </div>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold sm:text-xl">Live Site</h3>
+            <a
+              href={work.liveSiteLink}
+              class="text-sm text-foreground/75 sm:text-base"
+            >
+              {work.liveSiteLink}
+            </a>
+          </div>
+          <div class="space-y-2">
+            <h3 class="text-lg font-semibold sm:text-xl">Github</h3>
+            <a
+              href={work.githubLink}
+              class="text-sm text-foreground/75 sm:text-base"
+            >
+              {work.githubLink}
+            </a>
+          </div>
+        </div>
+
+        <div class="5 space-y-2">
+          {work.images.map((image) => (
+            <Image
+              src={image}
+              alt={`${work.title} image`}
+              class="shadow-sm"
+              format="webp"
+              decoding="async"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      </Shell>
+    )
+  }
+</Layout>

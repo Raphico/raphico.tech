@@ -21,3 +21,15 @@ export type Expertise = {
   title: string
   description: string
 }
+
+export type WorkItem = {
+  id: string
+  title: string
+  thumbnail: ImageMetadata
+  images: ImageMetadata[]
+  description: string
+  about: string
+  technologies: string[]
+  liveSiteLink: string
+  githubLink: string
+}

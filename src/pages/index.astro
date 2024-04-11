@@ -3,6 +3,8 @@ import Layout from "../layouts/Layout.astro"
 import Shell from "../components/Shell.astro"
 
 import H1 from "../components/H1.astro"
+import { Image } from "astro:assets"
+import { works } from "../data/content"
 ---
 
 <Layout>
@@ -15,5 +17,32 @@ import H1 from "../components/H1.astro"
         Passionate about building solutions with software
       </p>
     </div>
+
+    <section class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
+      {
+        works.map((work) => (
+          <a
+            href={`/work/${work.title.toLowerCase()}`}
+            class="flex flex-col items-start space-y-4"
+          >
+            <Image
+              src={work.thumbnail}
+              alt="Thumbnail"
+              width={1000}
+              height={500}
+              quality="max"
+              class="rounded-md shadow-sm transition-all duration-300 hover:opacity-70"
+              format="webp"
+              decoding="async"
+              loading="lazy"
+            />
+            <div>
+              <h3 class="text-xl font-semibold">{work.title}</h3>
+              <p class="text-base text-foreground/75">{work.description}</p>
+            </div>
+          </a>
+        ))
+      }
+    </section>
   </Shell>
 </Layout>
