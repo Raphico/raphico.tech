@@ -1,9 +1,9 @@
 import type { FooterItem, MainNavItem } from "../types"
 
 const links = {
-  x: "https://twitter.com/Raphico_OA",
+  x: "https://twitter.com/JustRaphico",
   github: "https://github.com/Raphico",
-  gmail: "mailto:raphicogit@gmail.com",
+  gmail: "mailto:contactraphico@gmail.com",
   discord: "https://discord.com/users/raphico",
 }
 
