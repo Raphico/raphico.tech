@@ -33,9 +33,17 @@ const work = works.find((work) => work.title.toLowerCase() === slug)
       </div>
     ) : (
       <Shell>
-        <H1>{work.title}</H1>
+        <div
+          class="animate-fade-up"
+          style={{ animationDelay: "0.10s", animationFillMode: "both" }}
+        >
+          <H1>{work.title}</H1>
+        </div>
 
-        <div class="flex items-center space-x-2 text-sm font-medium sm:text-base">
+        <div
+          class="animate-fade-up flex items-center space-x-2 text-sm font-medium sm:text-base"
+          style={{ animationDelay: "0.20s", animationFillMode: "both" }}
+        >
           <a href="/" class="text-foreground/75">
             Home
           </a>
@@ -43,11 +51,17 @@ const work = works.find((work) => work.title.toLowerCase() === slug)
           <p class="text-foreground">{work.title}</p>
         </div>
 
-        <div class="max-w-2xl">
+        <div
+          class="animate-fade-up max-w-2xl"
+          style={{ animationDelay: "0.30s", animationFillMode: "both" }}
+        >
           <BodyText>{work.about}</BodyText>
         </div>
 
-        <div class="space-y-6 sm:space-y-8">
+        <div
+          class="animate-fade-up space-y-6 sm:space-y-8"
+          style={{ animationDelay: "0.40s", animationFillMode: "both" }}
+        >
           <div class="space-y-2">
             <h3 class="text-lg font-semibold sm:text-xl">Technologies</h3>
             <div class="flex max-w-xl flex-wrap gap-2">
@@ -78,7 +92,10 @@ const work = works.find((work) => work.title.toLowerCase() === slug)
           </div>
         </div>
 
-        <div class="5 space-y-2">
+        <div
+          class="animate-fade-up space-y-2"
+          style={{ animationDelay: "0.50s", animationFillMode: "both" }}
+        >
           {work.images.map((image) => (
             <Image
               src={image}

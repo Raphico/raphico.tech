@@ -10,7 +10,8 @@ import { works } from "../data/content"
 <Layout>
   <Shell>
     <div
-      class="flex flex-col items-center justify-center space-y-2 text-center"
+      class="animate-fade-up flex flex-col items-center justify-center space-y-2 text-center"
+      style={{ animationDelay: "0.10s", animationFillMode: "both" }}
     >
       <H1> Hi! I&apos;m Raphael </H1>
       <p class="text-base text-foreground/75 sm:text-lg md:text-2xl">
@@ -18,7 +19,10 @@ import { works } from "../data/content"
       </p>
     </div>
 
-    <section class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
+    <section
+      class="animate-fade-up grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12"
+      style={{ animationDelay: "0.20s", animationFillMode: "both" }}
+    >
       {
         works.map((work) => (
           <a

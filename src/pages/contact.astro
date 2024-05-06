@@ -7,14 +7,18 @@ import { siteConfig } from "../config/site"
 
 <Layout>
   <Shell>
-    <h2 class="mx-auto max-w-2xl text-center font-heading text-xl sm:text-2xl">
+    <h2
+      class="animate-fade-up mx-auto max-w-2xl text-center font-heading text-xl sm:text-2xl"
+      style={{ animationDelay: "0.10s", animationFillMode: "both" }}
+    >
       Got an exciting project or just want to connect with a fellow developer?
       Let's collaborate to bring your ideas to life and make an impact. Reach
       out!
     </h2>
 
     <div
-      class="flex flex-col items-center justify-center space-y-4 text-center"
+      class="animate-fade-up flex flex-col items-center justify-center space-y-4 text-center"
+      style={{ animationDelay: "0.20s", animationFillMode: "both" }}
     >
       <a
         href={siteConfig.links.gmail}

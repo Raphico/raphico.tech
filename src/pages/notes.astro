@@ -9,7 +9,8 @@ import { notes } from "../data/content"
 <Layout>
   <Shell>
     <div
-      class="flex flex-col items-center justify-center space-y-2 text-center"
+      class="animate-fade-up flex flex-col items-center justify-center space-y-2 text-center"
+      style={{ animationDelay: "0.10s", animationFillMode: "both" }}
     >
       <H1>Notes</H1>
       <p class="text-base text-foreground/75 sm:text-lg md:text-2xl">
@@ -18,7 +19,10 @@ import { notes } from "../data/content"
       </p>
     </div>
 
-    <div class="mx-auto grid max-w-3xl gap-10">
+    <div
+      class="animate-fade-up mx-auto grid max-w-3xl gap-10"
+      style={{ animationDelay: "0.10s", animationFillMode: "both" }}
+    >
       {
         notes.map((note) => (
           <div class="shadown-md space-y-4 rounded-md bg-secondary/40 p-6 backdrop-blur sm:p-10">

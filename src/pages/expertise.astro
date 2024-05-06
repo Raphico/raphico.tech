@@ -8,11 +8,17 @@ import { expertise } from "../data/content"
 
 <Layout>
   <Shell>
-    <div class="text-center">
+    <div
+      class="animate-fade-up text-center"
+      style={{ animationDelay: "0.10s", animationFillMode: "both" }}
+    >
       <H1>My Expertise</H1>
     </div>
 
-    <div class="grid gap-10 sm:grid-cols-2">
+    <div
+      class="animate-fade-up grid gap-10 sm:grid-cols-2"
+      style={{ animationDelay: "0.20s", animationFillMode: "both" }}
+    >
       {
         expertise.map((item) => (
           <div class="shadown-md space-y-4 rounded-md bg-secondary/40 p-6 backdrop-blur sm:p-10">

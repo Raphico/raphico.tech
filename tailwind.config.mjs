@@ -31,7 +31,29 @@ export default {
         heading: ["Poppins", ...defaultTheme.fontFamily.sans],
         body: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      keyframes: {
+        /**
+         * Original source:
+         * @see https://github.com/juliusmarminge/acme-corp/blob/main/tooling/tailwind/index.ts
+         */
+        "fade-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          "75%": {
+            opacity: "0.6",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.5s",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 }
